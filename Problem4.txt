@@ -1,0 +1,72 @@
+//Venue Details Program:
+package com.hands2;
+import java.util.Scanner;
+
+class Venue1{
+	private String name;
+	private String city;
+	Scanner s2=new Scanner(System.in);
+	
+	public String getName(){
+		
+			return name;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getCity(){
+		
+		return city;
+	}
+	public void setCity(String city) {
+		this.city=city;
+	}
+	void inputVenue() {
+				
+		System.out.println("Enter the venue name: ");
+		name=s2.next();
+		setName(name);
+	}
+	void inputCity() {
+		
+		System.out.println("Enter the city name: ");
+		city=s2.next();
+		setCity(city);		
+	}
+	void output() {
+		System.out.println("Venue Details ");
+		System.out.println("Venue Name: "+getName());
+		System.out.println("City Name: "+getCity());
+		
+	}
+}
+
+public class Problem4 {
+
+	public static void main(String[] args) {
+		int choice;
+		Venue1 v1=new Venue1();
+		Scanner s3=new Scanner(System.in);
+		v1.inputVenue();
+		v1.inputCity();
+		v1.output();
+		System.out.println("Menu\n"+"1.Update Venue Name\n"+"2.Update City       Name\n"+"3.All informations Corrct/Exit\n"+"Type 1 or 2 or 3\n");
+		choice=s3.nextInt();
+		switch(choice) {
+		case 1:
+			v1.inputVenue();
+			v1.output();
+		    break;
+		case 2:
+			v1.inputCity();
+			v1.output();
+			break;
+		case 3:
+			v1.output();
+			break;
+		default:
+			System.out.println("Invalid Selection");
+			break;
+			
+		}
+	}

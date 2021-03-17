@@ -1,0 +1,26 @@
+//Venue Details Program:
+package com.pack2;
+import java.util.Scanner;
+class Venue{
+	String name;
+	String city;
+	
+	void show(String name,String city) {
+		System.out.println("Venue Details:");
+		System.out.println("Venue Name:"+name);
+		System.out.println("City Name"+city);
+	}
+}
+public class Problem1 {
+
+	public static void main(String[] args) {
+		String n,c;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the venue name ");
+		n=s.next();		
+		System.out.println("Enter the city name ");
+		c=s.next();
+		Venue v=new Venue();
+		v.show(n, c);
+			
+   }

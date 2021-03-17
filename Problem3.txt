@@ -1,0 +1,50 @@
+//Delivery Details Program:
+package com.hands2;
+import java.util.Scanner;
+
+class Delivery{
+	long over;
+	long ball;
+	long runs;
+	String batsman;
+	String bowler;
+	String nonStriker;
+	
+	void getInput() {
+		
+		Scanner s2=new Scanner(System.in);
+		System.out.println("Enter the over ");
+		over=s2.nextLong();
+		System.out.println("Enter the ball ");
+		ball=s2.nextLong();
+		System.out.println("Enter the runs ");
+		runs=s2.nextLong();
+		System.out.println("Enter the batsman name ");
+		batsman=s2.next();
+		System.out.println("Enter the bowler name ");
+		bowler=s2.next();
+		System.out.println("Enter the nonStriker name ");
+		nonStriker=s2.next();
+	}
+	
+	void displayDeliveryDetails(long over,long ball,long runs,String batsman,String bowler,String nonStriker) {
+		
+		System.out.println("Delivery Details : ");
+		System.out.println("Over :"+over);
+		System.out.println("Ball :"+ball);
+		System.out.println("Batsman :"+batsman);
+		System.out.println("Bowler :"+bowler);
+		System.out.println("nonStriker :"+nonStriker);
+	}
+}
+
+public class Problem3 {
+
+	public static void main(String[] args) {
+		Delivery d=new Delivery();
+		d.getInput();
+		d.displayDeliveryDetails(d.over,d.ball,d.runs,d.batsman,d.bowler,d.nonStriker);
+
+	}
+
+}

@@ -1,0 +1,36 @@
+//Player Details Program
+package com.hands2;
+import java.util.Scanner;
+class Player{
+	String name;
+	String country;
+	String skill;
+	
+	void input() {
+		Scanner s1=new Scanner(System.in);
+		System.out.println("Enter the player name\n");
+		name=s1.next();
+		System.out.println("Enter the country name\n");
+		country=s1.next();
+		System.out.println("Enter the skill\n");
+		skill=s1.next();
+		
+	}
+	void output(String name,String country,String skill ) {
+		System.out.println("Player Details : ");
+		System.out.println("Player Name : "+name);
+		System.out.println("Country Name : "+country);
+		System.out.println("Skill : "+skill);
+	}
+}
+
+public class Problem2 {
+
+	public static void main(String[] args) {
+		Player p=new Player();
+		p.input();
+		p.output(p.name,p.country,p.skill);
+
+	}
+
+}
